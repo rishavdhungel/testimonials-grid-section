@@ -1,0 +1,87 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ## Colors */
+
+/* ### Primary */
+/* 
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%) */
+
+
+:root{
+    --moderate_violet:hsl(263, 55%, 52%);
+    --veryDarkGrayishBlue:hsl(217, 19%, 35%);
+    --veryDarkblakishBlue:hsl(219, 29%, 14%);
+    --white:hsl(0, 0%, 100%);
+    --lightGray: hsl(0, 0%, 81%);
+    --lightGrayBlue:hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--lightGrayBlue);
+}
+
+.mainContainer{
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+    height: fit-content;
+}
+
+.profile{
+    display: flex;
+    padding: 20px;
+}
+
+.profileDetails{
+    display: block;
+    padding: 10px;
+}
+.profileimg img{
+    border-radius: 50%;
+}
+.testimonial{
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+}
+.daniel{
+    background-color: var(--moderate_violet);
+    color: white;
+}
+
+.jonathan{
+    background-color: var(--veryDarkGrayishBlue);
+    color: white;
+}
+
+.jeanette,.kira{
+    background-color: var(--white);
+    color: black;
+}
+
+.patrick{
+    background-color: var(--veryDarkblakishBlue);
+    color: white;
+}
+
+
+@media (max-width: 375px){
+    
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
