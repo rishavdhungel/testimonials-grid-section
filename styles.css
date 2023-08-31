@@ -1,8 +1,10 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 /* ## Colors */
-
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
 /* ### Primary */
 /* 
 Moderate violet: hsl(263, 55%, 52%)
@@ -32,16 +34,37 @@ body{
 .mainContainer{
     width: 80%;
     margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 30px;
     height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 30px;
+
+
 }
 
 .profile{
     display: flex;
     padding: 20px;
+}
+.daniel{
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+
+.first-para-details{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.second-para-details{
+    font-weight: 500;
+    opacity: 0.7;
 }
 
 .profileDetails{
@@ -56,6 +79,15 @@ body{
     margin-top: 30px;
     padding: 20px;
 }
+
+.profileName{
+    font-weight: 600;
+}
+
+.profiletag{
+    font-weight: 500;
+    color: var(--lightGray);
+}
 .daniel{
     background-color: var(--moderate_violet);
     color: white;
@@ -64,6 +96,15 @@ body{
 .jonathan{
     background-color: var(--veryDarkGrayishBlue);
     color: white;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.kira{
+    grid-column-start:4 ;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end:3 ;
 }
 
 .jeanette,.kira{
@@ -74,14 +115,14 @@ body{
 .patrick{
     background-color: var(--veryDarkblakishBlue);
     color: white;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
-
-@media (max-width: 375px){
-    
+@media(max-width:500px){
     .mainContainer{
         display: flex;
         flex-direction: column;
-    
+        flex-wrap: wrap;
     }
 }
